@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.laptrinhjavaweb.model.UserModel;
+
 @WebServlet(urlPatterns = {"/admin-trang-chu", "/admin-home"})
 public class HomeController extends HttpServlet{
 
@@ -17,6 +19,8 @@ public class HomeController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
 		RequestDispatcher rd  = request.getRequestDispatcher("/views/admin/home.jsp");
 		rd.forward(request, response);
 	}

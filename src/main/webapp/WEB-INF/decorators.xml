@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Tag này dùng để map tới folder chứa các master layout -->
+<decorators defaultdir="/decorators">
+    <!-- Những url được định nghĩa trong tags này sẽ ko bao giờ được
+    	sitemesh apply giao diện -->
+    <excludes>
+        <pattern>/api*</pattern>
+    </excludes>
+    
+    <!-- Định nghĩa các url theo partern để sitemesh apply các master layout từng trang -->
+    <decorator name="admin" page="admin.jsp">
+        <pattern>/admin*</pattern>
+    </decorator>
+    
+    <decorator name="web" page="web.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+   
+</decorators>
