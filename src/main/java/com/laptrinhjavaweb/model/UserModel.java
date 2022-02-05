@@ -1,40 +1,35 @@
 package com.laptrinhjavaweb.model;
 
-public class UserModel {
-	private String firstName;
-	private String lastName;
+import java.sql.Timestamp;
+
+public class UserModel extends AbstractModel{
+	
+	private String fullName;
 	private String userName;
-	
-	
-	public UserModel(String firstName, String lastName, String userName) {
-		this.firstName = firstName;
-		this.lastName = lastName;
+	private String passWord;
+	private int status;
+	private long roleId;
+
+	public UserModel(Timestamp createdDate, String createdBy, String fullName, String userName, String passWord,
+			int status, long roleId) {
+		super(createdDate, createdBy);
+		this.fullName = fullName;
 		this.userName = userName;
+		this.passWord = passWord;
+		this.status = status;
+		this.roleId = roleId;
+	}
+	
+
+	
+	public String getFullName() {
+		return fullName;
 	}
 
 
-	public String getFirstName() {
-		return firstName;
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
-
-
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-
-
-	public String getLastName() {
-		return lastName;
-	}
-
-
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
 
 
 	public String getUserName() {
@@ -42,18 +37,37 @@ public class UserModel {
 	}
 
 
-
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
 
 
-
-	@Override
-	public String toString() {
-		return "UserModel [firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName + "]";
+	public String getPassWord() {
+		return passWord;
 	}
-	
-	
-	
+
+
+	public void setPassWord(String passWord) {
+		this.passWord = passWord;
+	}
+
+
+	public int getStatus() {
+		return status;
+	}
+
+
+	public void setStatus(int status) {
+		this.status = status;
+	}
+
+	public long getRoleId() {
+		return roleId;
+	}
+
+	public void setRoleId(long roleId) {
+		this.roleId = roleId;
+	}
+
+
 }
