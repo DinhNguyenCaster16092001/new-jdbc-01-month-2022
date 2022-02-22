@@ -1,18 +1,19 @@
 package com.laptrinhjavaweb.model;
 
-import java.sql.Timestamp;
-
-public class NewModel extends AbstractModel {
+public class NewModel extends AbstractModel<NewModel> {
 	private String title;
 	private String thumbnail;
 	private String shortDescription;
 	private String content;
-	private long categoryId;
+	private Long categoryId;
+	private String categoryCode;
 	
+	public NewModel() {
+		
+	}
 	
-	public NewModel(Timestamp createdDate, String createdBy, String title, String thumbnail, String shortDescription,
+	public NewModel(String title, String thumbnail, String shortDescription,
 			String content, long categoryId) {
-		super(createdDate, createdBy);
 		this.title = title;
 		this.thumbnail = thumbnail;
 		this.shortDescription = shortDescription;
@@ -61,14 +62,24 @@ public class NewModel extends AbstractModel {
 	}
 
 
-	public long getCategoryId() {
+	public Long getCategoryId() {
 		return categoryId;
 	}
 
 
-	public void setCategoryId(long categoryId) {
+	public void setCategoryId(Long categoryId) {
 		this.categoryId = categoryId;
 	}
+
+	public String getCategoryCode() {
+		return categoryCode;
+	}
+
+	public void setCategoryCode(String categoryCode) {
+		this.categoryCode = categoryCode;
+	}
+
+	
 	
 	
 }

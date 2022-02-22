@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Xin chào lớp java web 01-2022</h1>
-	<p>Đây là Trang Admin</p>
+	
 </body>
 </html>

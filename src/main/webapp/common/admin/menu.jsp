@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="/common/taglib.jsp"%>
+<c:url var="newsListLink" value="/admin-news">
+<c:param name="page" value="1"/>
+<c:param name="pageItem" value="2"/>
+<c:param name="sortName" value="createddate"/>
+<c:param name="sortBy" value="desc"/>
+<c:param name="type" value="list"/>
+</c:url>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <div id="sidebar" class="sidebar                  responsive                    ace-save-state">
     <script type="text/javascript">
@@ -44,7 +51,7 @@
             <b class="arrow"></b>
             <ul class="submenu">
                 <li>
-                    <a href='<c:url value="/admin-new?type=list&page=1&maxPageItem=2&sortName=title&sortBy=desc"/>'>
+                    <a href="<c:url value="${newsListLink}"/>">
                         <i class="menu-icon fa fa-caret-right"></i>
                         DS bài viết
                     </a>

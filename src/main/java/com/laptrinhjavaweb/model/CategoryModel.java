@@ -1,14 +1,18 @@
 package com.laptrinhjavaweb.model;
 
-import java.sql.Timestamp;
-
-public class CategoryModel extends AbstractModel{
+public class CategoryModel extends AbstractModel<CategoryModel>{
 	private String name;
 	private String code;
 	
 	
-	public CategoryModel(Timestamp createdDate, String createdBy, String name, String code) {
-		super(createdDate, createdBy);
+	
+	
+	public CategoryModel() {
+		super();
+	}
+
+
+	public CategoryModel(String name, String code) {
 		this.name = name;
 		this.code = code;
 	}

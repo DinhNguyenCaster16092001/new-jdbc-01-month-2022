@@ -2,13 +2,15 @@ package com.laptrinhjavaweb.model;
 
 import java.sql.Timestamp;
 
-public class RoleModel extends AbstractModel {
+public class RoleModel extends AbstractModel<RoleModel> {
 
 	private String name;
 	private String code;
 
+	public RoleModel() {
+	}
+
 	public RoleModel(Timestamp createdDate, String createdBy, String name, String code) {
-		super(createdDate, createdBy);
 		this.name = name;
 		this.code = code;
 	}

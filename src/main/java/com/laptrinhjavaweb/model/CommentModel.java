@@ -1,16 +1,13 @@
 package com.laptrinhjavaweb.model;
 
-import java.sql.Timestamp;
-
-public class CommentModel extends AbstractModel{
+public class CommentModel extends AbstractModel<CommentModel>{
 	
 	private String content;
 	private Long userId;
 	private Long newId;
 	
 	
-	public CommentModel(Timestamp createdDate, String createdBy, String content, Long userId, Long newId) {
-		super(createdDate, createdBy);
+	public CommentModel(String content, Long userId, Long newId) {
 		this.content = content;
 		this.userId = userId;
 		this.newId = newId;

@@ -1,18 +1,20 @@
 package com.laptrinhjavaweb.model;
 
-import java.sql.Timestamp;
-
-public class UserModel extends AbstractModel{
+public class UserModel extends AbstractModel<UserModel>{
 	
 	private String fullName;
 	private String userName;
 	private String passWord;
-	private int status;
-	private long roleId;
+	private Integer status;
+	private Long roleId;
+	private RoleModel role;
 
-	public UserModel(Timestamp createdDate, String createdBy, String fullName, String userName, String passWord,
-			int status, long roleId) {
-		super(createdDate, createdBy);
+	public UserModel() {
+		
+	}
+	
+	public UserModel( String fullName, String userName, String passWord,
+			Integer status, Long roleId) {
 		this.fullName = fullName;
 		this.userName = userName;
 		this.passWord = passWord;
@@ -57,7 +59,7 @@ public class UserModel extends AbstractModel{
 	}
 
 
-	public void setStatus(int status) {
+	public void setStatus(Integer status) {
 		this.status = status;
 	}
 
@@ -65,9 +67,19 @@ public class UserModel extends AbstractModel{
 		return roleId;
 	}
 
-	public void setRoleId(long roleId) {
+	public void setRoleId(Long roleId) {
 		this.roleId = roleId;
 	}
 
+	public RoleModel getRole() {
+		return role;
+	}
 
+	public void setRole(RoleModel role) {
+		this.role = role;
+	}
+
+	
+	
+	
 }
